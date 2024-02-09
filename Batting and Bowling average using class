@@ -1,0 +1,70 @@
+class game:
+    def __init__(self, name, age, bt_style, bw_style):
+        self.names = name
+        self.ages = age
+        self.batting_style = bt_style
+        self.bowling_style = bw_style
+
+    def display(self):
+        if self.names == "Virat Kohli" and self.ages == 35 and self.batting_style == "Right hand batsman" and self.bowling_style == "Right arm over":
+            print("Name : ", self.names)
+            print("Age: ", self.ages)
+            print("Batting Style: ", self.batting_style)
+            print('Bowling Style: ', self.bowling_style)
+            print("He is most famous player in the world....")
+
+        else:
+            print("He is more worser than i think....")
+
+    def batting_average(self):
+        t20_inning = int(input("Enter the inning you played in t20: "))
+        odi_inning = int(input("Enter the inning you played in odi: "))
+        test_inning = int(input("Enter the inning you played in test: "))
+        t20_not_outs = int(input("Enter the notouts in t20: "))
+        odi_not_outs = int(input("Enter the notouts in odi: "))
+        test_not_outs = int(input("Enter the notouts in test: "))
+        t20_runs = int(input('Enter how many runs you scored in t20: '))
+        odi_runs = int(input('Enter how many runs you scored in odi: '))
+        test_runs = int(input('Enter how many runs you scored in test: '))
+
+        total_innings = t20_inning + odi_inning + test_inning
+        print("Total innings played by virat : ", total_innings)
+
+        total_not_outs = t20_not_outs + odi_not_outs + test_not_outs
+        print("Total notouts in your career: ", total_not_outs)
+
+        total_scores = t20_runs + odi_runs + test_runs
+        print("Total Runs you scored in all format of the game: ", total_scores)
+
+        outs = total_innings - total_not_outs
+        print("Total outs in all format of the game: ", outs)
+
+        return float(total_scores / outs)
+
+    def bowling_average(self):
+        t20_runs_conceded = int(input("Enter the runs you conceded in t20: "))
+        odi_runs_conceded = int(input("Enter the runs you conceded in odi: "))
+        test_runs_conceded = int(input("Enter the runs you conceded in test: "))
+        t20_wickets = int(input('Enter your wickets in t20: '))
+        odi_wickets = int(input('Enter your wickets in odi: '))
+        test_wickets = int(input('Enter your wickets in test: '))
+
+        total_runs_conceded = t20_runs_conceded + odi_runs_conceded + test_runs_conceded
+        print("Total Runs you conceded in all format: ", total_runs_conceded)
+
+        total_wickets = t20_wickets + odi_wickets + test_wickets
+        print("Total Wickets in all format: ", total_wickets)
+
+        average = total_runs_conceded / total_wickets
+        return average
+
+
+cricket = game("Virat Kohli", 35, "Right hand batsman", 'Right arm over')
+cricket.display()
+
+bt_average = cricket.batting_average()
+print(bt_average)
+
+bw_average = cricket.bowling_average()
+print(bw_average)
+

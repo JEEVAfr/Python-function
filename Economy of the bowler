@@ -1,0 +1,37 @@
+
+class Economy:
+ 
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def economy(self):
+        t_runs_conceded = int(input("Enter the t20 runs conceded: "))
+        odi_runs_conceded = int(input("Enter the odi runs conceded: "))
+        test_runs_conceded = int(input("Enter the test runs conceded: "))
+
+        total_runs_conceded = t_runs_conceded + odi_runs_conceded + test_runs_conceded
+
+        print(total_runs_conceded)
+
+        t_ball_bowled = int(input("Enter the ball bowled in t20: "))
+        odi_ball_bowled = int(input("Enter the ball bowled in odi: "))
+        test_ball_bowled = int(input("Enter the ball bowled in test: "))
+
+        total_ball_bowled = t_ball_bowled + odi_ball_bowled + test_ball_bowled
+
+        print(total_ball_bowled)
+
+        rate = total_runs_conceded / total_ball_bowled
+
+        economies = rate * 6
+
+        print(economies)
+
+
+
+eco = Economy("Murali", 45)
+eco.economy()
+
+

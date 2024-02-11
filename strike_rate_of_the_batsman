@@ -1,0 +1,13 @@
+def strike_rate():
+
+    t_runs_scored = int(input('Enter the runs scored in t20: '))
+    ball_faced = int(input("Enter the ball faced by the batsman: "))
+
+    rate = t_runs_scored / ball_faced
+
+    strike_rate_of_the_batsman = rate * 100
+
+    return strike_rate_of_the_batsman
+
+
+print(strike_rate())

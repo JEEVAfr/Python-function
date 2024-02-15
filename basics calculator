@@ -1,0 +1,36 @@
+user_input = input("Enter the type of operation do you want:").lower()
+
+if user_input == "addition":
+    a = int(input("Enter the first number: "))
+    b = int(input("Enter the second number: "))
+
+    add = a + b
+
+    print(add)
+
+elif user_input == "subtraction":
+    a = int(input("Enter the first number: "))
+    b = int(input("Enter the second number: "))
+
+    sub = a - b
+
+    print(sub)
+
+elif user_input == "multiply":
+    a = int(input("Enter the first number: "))
+    b = int(input("Enter the second number: "))
+
+    mul = a * b
+
+    print(mul)
+
+elif user_input == "division":
+    a = int(input("Enter the first number: "))
+    b = int(input("Enter the second number: "))
+
+    div = a / b
+
+    print(div)
+
+else:
+    print("Your are entered the wrong option")

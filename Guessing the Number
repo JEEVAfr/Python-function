@@ -1,0 +1,19 @@
+secret_code = 8
+
+guessed_value = ""
+
+while guessed_value != secret_code:
+
+    guess = int(input("Enter the guessed number: "))
+
+    if guess > secret_code:
+        print("The number is too high")
+
+    elif guess < secret_code:
+        print("The number is too low")
+
+    elif guess == secret_code:
+        print("you won")
+        break
+    else:
+        print("Your wrong")
